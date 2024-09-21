@@ -1,0 +1,1 @@
+C:\Program Files\apache-maven-3.9.9 mvn clean test
