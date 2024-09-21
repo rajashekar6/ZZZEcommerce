@@ -22,18 +22,18 @@ public Properties p;
 	@BeforeClass
 	public void setup() throws IOException
 	
-	{
+	{//
 		FileInputStream file = new FileInputStream("./src/test//resources//config.properites");
 		p= new Properties();
 		p.load(file);
 	
 		logger =(Logger) LogManager.getLogger(this.getClass());
 		driver= new ChromeDriver();
-		driver.manage().deleteAllCookies();
+		driver.manage().deleteAllCookies();	
 		driver.get(p.getProperty("appulr")); //URL from properties file 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
-	}
+	}//
 	
 	@AfterClass
 	public void tearDown()
