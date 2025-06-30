@@ -1,0 +1,31 @@
+SELECT * FROM Products where price =18 or price = 22 order by SupplierID asc;
+
+
+SELECT * FROM Products where price in (18, 22, 19, 40)order by SupplierID asc;
+
+
+SELECT * FROM Products where ProductName like 'ch%' order by SupplierID desc;
+
+
+
+Top price 
+
+
+
+SELECT DISTINCT Top 1  price
+FROM Products
+ORDER BY price DESC 
+
+SELECT price 
+FROM Products 
+ORDER BY price DESC 
+LIMIT 2, 1
+
+
+
+SELECT TOP 1 price 
+FROM 
+    (SELECT TOP 3 price 
+     FROM Products 
+     ORDER BY price DESC)  
+ORDER BY price ASC
