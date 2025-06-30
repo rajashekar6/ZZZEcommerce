@@ -73,6 +73,9 @@ public class seltest {
 	    .pollingEvery(Duration.ofSeconds(5))
 	    .ignoring(NoSuchElementException.class);
 	    
+	    //test2
+	    driver.findElement(By.xpath(""));
+	    
 	    
 }
 }
